@@ -2,6 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Milan Önder Fan Site</title><style>
+
 * {
     margin: 0;
     padding: 0;
@@ -15,18 +16,18 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #08080b;
-    color: #ffffff;
+    color: white;
     line-height: 1.6;
 }
 
-/* NAVBAR */
+/* NAVIGATION */
 
 nav {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(8,8,11,0.92);
+    background: rgba(8,8,11,0.94);
     backdrop-filter: blur(10px);
     padding: 18px 30px;
     display: flex;
@@ -61,14 +62,20 @@ nav a:hover {
 .hero {
     height: 100vh;
     min-height: 650px;
+
     background-image:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.85)),
+    linear-gradient(
+        rgba(0,0,0,0.25),
+        rgba(0,0,0,0.9)
+    ),
     url("milan-hero.jpg");
 
     background-size: cover;
     background-position: center;
+
     display: flex;
     align-items: flex-end;
+
     padding: 80px 8%;
 }
 
@@ -314,15 +321,26 @@ footer strong {
     .gallery img {
         height: 420px;
     }
+
 }
-</style></head><body><!-- NAVIGATION --><nav><div class="logo">MILAN ÖNDER</div><ul>
-<li><a href="#about">ABOUT</a></li>
-<li><a href="#gallery">GALLERY</a></li>
-<li><a href="#birthday">BIRTHDAY</a></li>
-<li><a href="#message">MESSAGE</a></li>
-</ul></nav><!-- HERO --><header class="hero"><div class="hero-content"><h1>MILAN<br>ÖNDER</h1><p>
+
+</style></head><body><!-- NAVIGATION --><nav><div class="logo">
+MILAN ÖNDER
+</div><ul><li>
+<a href="#about">ABOUT</a>
+</li><li>
+<a href="#gallery">GALLERY</a>
+</li><li>
+<a href="#birthday">BIRTHDAY</a>
+</li><li>
+<a href="#message">MESSAGE</a>
+</li></ul></nav><!-- HERO --><header class="hero"><div class="hero-content"><h1>
+MILAN<br>ÖNDER
+</h1><p>
 A fan-made space created with love for Milan Önder.
-</p></div></header><!-- ABOUT --><section id="about"><h2 class="section-title">About Milan</h2><p class="section-subtitle">
+</p></div></header><!-- ABOUT --><section id="about"><h2 class="section-title">
+About Milan
+</h2><p class="section-subtitle">
 A few things fans love about him.
 </p><p class="about-text">Milan Önder, 28 Eylül 2004 doğumlu, Rusya'da doğup Ayvalık'ta büyümüştür.
 Annesi Rus, babası Türk'tür ve Ivan adında bir kardeşi vardır.
@@ -330,7 +348,9 @@ Annesi Rus, babası Türk'tür ve Ivan adında bir kardeşi vardır.
 Crush grubunun üyelerinden biri olan Milan, gruba kabul edilen
 7. üye olarak açıklanmıştır.
 
-</p></section><!-- FACTS --><section><h2 class="section-title">Milan in a Few Facts</h2><div class="facts"><div class="fact">
+</p></section><!-- FACTS --><section><h2 class="section-title">
+Milan in a Few Facts
+</h2><div class="facts"><div class="fact">
 <h3>🎂 Birthday</h3>
 <p>28 September 2004</p>
 </div><div class="fact">
@@ -348,9 +368,13 @@ Crush grubunun üyelerinden biri olan Milan, gruba kabul edilen
 </div><div class="fact">
 <h3>🖤 Favorite Song</h3>
 <p>Godspeed</p>
-</div></div></section><!-- GALLERY --><section id="gallery"><h2 class="section-title">Gallery</h2><p class="section-subtitle">
+</div></div></section><!-- GALLERY --><section id="gallery"><h2 class="section-title">
+Gallery
+</h2><p class="section-subtitle">
 Moments of Milan, collected by fans. ♡
-</p><div class="gallery"><img src="milan-gallery-1.png" alt="Milan Önder"><img src="milan-gallery-2.jpg" alt="Milan Önder"><img src="milan-gallery-3.jpg" alt="Milan Önder"></div></section><!-- BIRTHDAY --><section id="birthday"><div class="birthday"><h2>🎂 Milan's Birthday</h2><p>
+</p><div class="gallery"><img src="milan-gallery-1.png" alt="Milan Önder"><img src="milan-gallery-2.jpg" alt="Milan Önder"><img src="milan-gallery-3.jpg" alt="Milan Önder"></div></section><!-- BIRTHDAY --><section id="birthday"><div class="birthday"><h2>
+🎂 Milan's Birthday
+</h2><p>
 28 September 2004
 </p><div class="countdown"><div class="time-box">
 <span id="days">0</span>
@@ -364,46 +388,45 @@ Moments of Milan, collected by fans. ♡
 </div><div class="time-box">
 <span id="seconds">0</span>
 <small>SECONDS</small>
-</div></div></div></section><!-- MUSIC --><section class="music"><div class="music-card"><h3>🎵 Godspeed</h3><p>
+</div></div></div></section><!-- MUSIC --><section class="music"><div class="music-card"><h3>
+🎵 Godspeed
+</h3><p>
 Frank Ocean's "Godspeed" holds a special place in Milan's story.
 A song remembered by fans and connected to a meaningful tattoo.
-</p></div></section><!-- MESSAGE --><section id="message"><h2 class="section-title">Leave a Message</h2><p class="section-subtitle">
+</p></div></section><!-- MESSAGE --><section id="message"><h2 class="section-title">
+Leave a Message
+</h2><p class="section-subtitle">
 Write something you'd like to say to Milan. ♡
-</p><div class="message-box">
-
-<form action="https://formspree.io/f/mdaqwgrq" method="POST">
-
-<input 
-type="text" 
-name="name" 
-placeholder="Your name" 
+</p><div class="message-box"><form
+action="https://formspree.io/f/mdaqwgrq"
+method="POST"
+><input
+type="text"
+name="name"
+placeholder="Your name"
 required
->
 
-<input 
-type="email" 
-name="email" 
-placeholder="Your email" 
+«»
+
+<input
+type="email"
+name="email"
+placeholder="Your email"
 required
->
 
-<textarea 
-name="message" 
-placeholder="Your message for Milan..." 
+«»
+
+<textarea
+name="message"
+placeholder="Your message for Milan..."
 required
-></textarea>
-
-<button type="submit">
+></textarea><button type="submit">
 SEND MESSAGE
-</button>
-
-</form>
-
-</div></section><!-- FOOTER --><footer><p>
+</button></form></div></section><!-- FOOTER --><footer><p>
 Made with ♡ for <strong>Milan Önder</strong>
 </p><p>
 Milan Önder Fan Site
-</p></footer><!-- JAVASCRIPT --><script>
+</p></footer><!-- COUNTDOWN --><script>
 
 function updateCountdown() {
 
@@ -411,50 +434,78 @@ const now = new Date();
 
 let year = now.getFullYear();
 
-let birthday = new Date(year, 8, 28, 0, 0, 0);
+let birthday = new Date(
+year,
+8,
+28,
+0,
+0,
+0
+);
 
 if (now > birthday) {
-birthday = new Date(year + 1, 8, 28, 0, 0, 0);
-}
 
-const difference = birthday - now;
-
-const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-
-const hours = Math.floor(
-(difference / (1000 * 60 * 60)) % 24
+birthday = new Date(
+year + 1,
+8,
+28,
+0,
+0,
+0
 );
-
-const minutes = Math.floor(
-(difference / (1000 * 60)) % 60
-);
-
-const seconds = Math.floor(
-(difference / 1000) % 60
-);
-
-document.getElementById("days").textContent = days;
-
-document.getElementById("hours").textContent = hours;
-
-document.getElementById("minutes").textContent = minutes;
-
-document.getElementById("seconds").textContent = seconds;
 
 }
 
-setInterval(updateCountdown, 1000);
+const difference =
+birthday - now;
+
+const days =
+Math.floor(
+difference /
+(1000 * 60 * 60 * 24)
+);
+
+const hours =
+Math.floor(
+(difference /
+(1000 * 60 * 60)) % 24
+);
+
+const minutes =
+Math.floor(
+(difference /
+(1000 * 60)) % 60
+);
+
+const seconds =
+Math.floor(
+(difference /
+1000) % 60
+);
+
+document.getElementById(
+"days"
+).textContent = days;
+
+document.getElementById(
+"hours"
+).textContent = hours;
+
+document.getElementById(
+"minutes"
+).textContent = minutes;
+
+document.getElementById(
+"seconds"
+).textContent = seconds;
+
+}
+
+setInterval(
+updateCountdown,
+1000
+);
 
 updateCountdown();
 
-
-function sendMessage() {
-
-alert(
-"Mesajın için teşekkürler! ♡\n\nBu bölüm şu anda demo olarak çalışıyor."
-);
-
-}
-
-</script></body>
-</html>
+</script></body></html>
