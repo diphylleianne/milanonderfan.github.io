@@ -1,112 +1,249 @@
 <!DOCTYPE html><html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Milan Önder Fan Site</title><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Milan Önder Fan Site</title><style>
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #0b0b0f;
-    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #08080b;
+    color: #ffffff;
     line-height: 1.6;
 }
 
-header {
-    min-height: 100vh;
+/* NAVBAR */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(8,8,11,0.92);
+    backdrop-filter: blur(10px);
+    padding: 18px 30px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 30px;
-    background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.9)),
-    url("https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1600&q=80");
-    background-size: cover;
-    background-position: center;
 }
 
-.hero h1 {
-    font-size: 55px;
-    margin-bottom: 15px;
+.logo {
+    font-size: 20px;
+    font-weight: bold;
     letter-spacing: 3px;
 }
 
-.hero p {
-    font-size: 20px;
-    color: #ddd;
-}
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: #111116;
-    padding: 15px;
-    text-align: center;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 12px;
-    font-weight: bold;
+    font-size: 14px;
 }
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+    min-height: 650px;
+    background-image:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.85)),
+    url("milan-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 80px 8%;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 9vw, 110px);
+    letter-spacing: 8px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #dddddd;
+}
+
+/* SECTIONS */
 
 section {
-    max-width: 1000px;
+    padding: 100px 8%;
+    max-width: 1200px;
     margin: auto;
-    padding: 70px 25px;
 }
 
-h2 {
-    text-align: center;
-    font-size: 35px;
-    margin-bottom: 35px;
+.section-title {
+    font-size: 42px;
+    margin-bottom: 20px;
 }
 
-.about {
-    text-align: center;
-    color: #ddd;
+.section-subtitle {
+    color: #999;
+    margin-bottom: 50px;
 }
 
-.cards {
+/* ABOUT */
+
+.about-text {
+    max-width: 800px;
+    color: #cccccc;
+    font-size: 18px;
+}
+
+/* FACTS */
+
+.facts {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
-.card {
-    background: #17171e;
-    padding: 25px;
-    border-radius: 15px;
-    text-align: center;
-    border: 1px solid #292932;
-}
-
-.card h3 {
-    margin-bottom: 10px;
-}
-
-.message-box {
-    background: #17171e;
+.fact {
+    background: #141419;
     padding: 30px;
+    border-radius: 14px;
+    border: 1px solid #25252d;
+}
+
+.fact h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.fact p {
+    color: #aaa;
+}
+
+/* GALLERY */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
     border-radius: 15px;
-    max-width: 650px;
+    transition: transform 0.4s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* BIRTHDAY */
+
+.birthday {
+    text-align: center;
+    background: #141419;
+    border-radius: 20px;
+    padding: 60px 30px;
+}
+
+.birthday h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.birthday p {
+    color: #aaa;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.time-box {
+    background: #222229;
+    padding: 20px;
+    min-width: 90px;
+    border-radius: 12px;
+}
+
+.time-box span {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.time-box small {
+    color: #999;
+}
+
+/* MUSIC */
+
+.music {
+    text-align: center;
+}
+
+.music-card {
+    background: #141419;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 600px;
     margin: auto;
 }
 
-input, textarea {
+.music-card h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.music-card p {
+    color: #aaa;
+}
+
+/* MESSAGE */
+
+.message-box {
+    max-width: 650px;
+    margin: auto;
+    background: #141419;
+    padding: 35px;
+    border-radius: 18px;
+}
+
+input,
+textarea {
     width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border: none;
-    background: #25252e;
+    background: #222229;
+    border: 1px solid #33333d;
     color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-family: inherit;
 }
 
 textarea {
@@ -117,104 +254,179 @@ textarea {
 button {
     width: 100%;
     padding: 15px;
-    border: none;
-    border-radius: 8px;
     background: white;
     color: black;
+    border: none;
+    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
 }
 
 button:hover {
-    background: #ddd;
+    opacity: 0.8;
 }
 
-.birthday {
-    text-align: center;
-    background: #17171e;
-    border-radius: 20px;
-    padding: 40px;
-}
+/* FOOTER */
 
 footer {
     text-align: center;
-    padding: 30px;
-    background: #111116;
-    color: #aaa;
+    padding: 50px 20px;
+    background: #050507;
+    color: #777;
 }
 
-@media(max-width:600px) {
-    .hero h1 {
-        font-size: 38px;
+footer strong {
+    color: white;
+}
+
+/* MOBILE */
+
+@media(max-width:700px) {
+
+    nav {
+        padding: 15px;
+    }
+
+    nav ul {
+        gap: 10px;
     }
 
     nav a {
-        margin: 0 5px;
-        font-size: 13px;
+        font-size: 11px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 60px 25px;
+    }
+
+    section {
+        padding: 80px 25px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .gallery img {
+        height: 420px;
     }
 }
-</style></head><body><header>
-<div class="hero">
-<h1>MILAN ÖNDER</h1>
-<p>Fan Site • Crush • With Love From Fans</p>
-</div>
-</header><nav>
-<a href="#about">Hakkında</a>
-<a href="#facts">Bilgiler</a>
-<a href="#birthday">Doğum Günü</a>
-<a href="#message">Mesaj Bırak</a>
-</nav><section id="about">
-<h2>Milan Önder</h2>
-<p class="about">
-Milan Önder için hazırlanmış bu fan sitesine hoş geldin.
-Burada Milan hakkında bilgiler, hayran mesajları ve özel günler için
-hazırlanan içerikleri bulabilirsin. Bu site tamamen hayran sevgisiyle hazırlanmıştır. ♡
-</p>
-</section><section id="facts">
-<h2>Milan Hakkında</h2><div class="cards"><div class="card">
-<h3>🎂 Doğum Günü</h3>
-<p>28 Eylül 2004</p>
-</div><div class="card">
-<h3>📍 Doğduğu Yer</h3>
-<p>Rusya</p>
-</div><div class="card">
-<h3>🌊 Büyüdüğü Yer</h3>
-<p>Ayvalık</p>
-</div><div class="card">
-<h3>👨‍👩‍👦 Ailesi</h3>
-<p>Annesi Rus, babası Türk.</p>
-</div><div class="card">
-<h3>🎤 Grup</h3>
+</style></head><body><!-- NAVIGATION --><nav><div class="logo">MILAN ÖNDER</div><ul>
+<li><a href="#about">ABOUT</a></li>
+<li><a href="#gallery">GALLERY</a></li>
+<li><a href="#birthday">BIRTHDAY</a></li>
+<li><a href="#message">MESSAGE</a></li>
+</ul></nav><!-- HERO --><header class="hero"><div class="hero-content"><h1>MILAN<br>ÖNDER</h1><p>
+A fan-made space created with love for Milan Önder.
+</p></div></header><!-- ABOUT --><section id="about"><h2 class="section-title">About Milan</h2><p class="section-subtitle">
+A few things fans love about him.
+</p><p class="about-text">Milan Önder, 28 Eylül 2004 doğumlu, Rusya'da doğup Ayvalık'ta büyümüştür.
+Annesi Rus, babası Türk'tür ve Ivan adında bir kardeşi vardır.
+
+Crush grubunun üyelerinden biri olan Milan, gruba kabul edilen
+7. üye olarak açıklanmıştır.
+
+</p></section><!-- FACTS --><section><h2 class="section-title">Milan in a Few Facts</h2><div class="facts"><div class="fact">
+<h3>🎂 Birthday</h3>
+<p>28 September 2004</p>
+</div><div class="fact">
+<h3>🌍 Born</h3>
+<p>Russia</p>
+</div><div class="fact">
+<h3>🌊 Grew Up</h3>
+<p>Ayvalık, Türkiye</p>
+</div><div class="fact">
+<h3>🎤 Group</h3>
 <p>Crush</p>
-</div><div class="card">
-<h3>🎵 Favori Sanatçı</h3>
+</div><div class="fact">
+<h3>🎵 Favorite Artist</h3>
 <p>Frank Ocean</p>
-</div><div class="card">
-<h3>🖤 Özel Detay</h3>
-<p>Godspeed şarkısını dövme olarak yaptırdı.</p>
-</div><div class="card">
-<h3>⭐ Grup Üyeliği</h3>
-<p>Gruba kabul edilen 7. üye olarak açıklandı.</p>
-</div></div>
-</section><section id="birthday">
-<div class="birthday">
-<h2>🎂 Milan'ın Doğum Günü</h2>
-<p>
-28 Eylül'de Milan'ın doğum gününü birlikte kutluyoruz. 
-Hayranlar olarak sevgimizi ve güzel dileklerimizi paylaşalım. ♡
-</p>
-<br>
-<p><strong>İyi ki doğdun Milan! 🖤</strong></p>
-</div>
-</section><section id="message">
-<h2>💌 Milan'a Mesaj Bırak</h2><div class="message-box">
-<input type="text" placeholder="Adın">
-<textarea placeholder="Milan'a söylemek istediğin mesaj..."></textarea>
-<button onclick="alert('Mesajın için teşekkürler! ♡')">
-Mesajımı Gönder
-</button>
-</div></section><footer>
-<p>♡ Milan Önder Fan Site ♡</p>
-<p>Bu site hayranlar tarafından sevgiyle hazırlanmıştır.</p>
-</footer></body>
-  </html>
+</div><div class="fact">
+<h3>🖤 Favorite Song</h3>
+<p>Godspeed</p>
+</div></div></section><!-- GALLERY --><section id="gallery"><h2 class="section-title">Gallery</h2><p class="section-subtitle">
+Moments of Milan, collected by fans. ♡
+</p><div class="gallery"><img src="milan-gallery-1.png" alt="Milan Önder"><img src="milan-gallery-2.jpg" alt="Milan Önder"><img src="milan-gallery-3.jpg" alt="Milan Önder"></div></section><!-- BIRTHDAY --><section id="birthday"><div class="birthday"><h2>🎂 Milan's Birthday</h2><p>
+28 September 2004
+</p><div class="countdown"><div class="time-box">
+<span id="days">0</span>
+<small>DAYS</small>
+</div><div class="time-box">
+<span id="hours">0</span>
+<small>HOURS</small>
+</div><div class="time-box">
+<span id="minutes">0</span>
+<small>MINUTES</small>
+</div><div class="time-box">
+<span id="seconds">0</span>
+<small>SECONDS</small>
+</div></div></div></section><!-- MUSIC --><section class="music"><div class="music-card"><h3>🎵 Godspeed</h3><p>
+Frank Ocean's "Godspeed" holds a special place in Milan's story.
+A song remembered by fans and connected to a meaningful tattoo.
+</p></div></section><!-- MESSAGE --><section id="message"><h2 class="section-title">Leave a Message</h2><p class="section-subtitle">
+Write something you'd like to say to Milan. ♡
+</p><div class="message-box"><input type="text" placeholder="Your name"><textarea placeholder="Your message for Milan..."></textarea><button onclick="sendMessage()">
+SEND MESSAGE
+</button></div></section><!-- FOOTER --><footer><p>
+Made with ♡ for <strong>Milan Önder</strong>
+</p><p>
+Milan Önder Fan Site
+</p></footer><!-- JAVASCRIPT --><script>
+
+function updateCountdown() {
+
+const now = new Date();
+
+let year = now.getFullYear();
+
+let birthday = new Date(year, 8, 28, 0, 0, 0);
+
+if (now > birthday) {
+birthday = new Date(year + 1, 8, 28, 0, 0, 0);
+}
+
+const difference = birthday - now;
+
+const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+const hours = Math.floor(
+(difference / (1000 * 60 * 60)) % 24
+);
+
+const minutes = Math.floor(
+(difference / (1000 * 60)) % 60
+);
+
+const seconds = Math.floor(
+(difference / 1000) % 60
+);
+
+document.getElementById("days").textContent = days;
+
+document.getElementById("hours").textContent = hours;
+
+document.getElementById("minutes").textContent = minutes;
+
+document.getElementById("seconds").textContent = seconds;
+
+}
+
+setInterval(updateCountdown, 1000);
+
+updateCountdown();
+
+
+function sendMessage() {
+
+alert(
+"Mesajın için teşekkürler! ♡\n\nBu bölüm şu anda demo olarak çalışıyor."
+);
+
+}
+
+</script></body>
+</html>
