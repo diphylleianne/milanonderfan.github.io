@@ -369,9 +369,37 @@ Frank Ocean's "Godspeed" holds a special place in Milan's story.
 A song remembered by fans and connected to a meaningful tattoo.
 </p></div></section><!-- MESSAGE --><section id="message"><h2 class="section-title">Leave a Message</h2><p class="section-subtitle">
 Write something you'd like to say to Milan. ♡
-</p><div class="message-box"><input type="text" placeholder="Your name"><textarea placeholder="Your message for Milan..."></textarea><button onclick="sendMessage()">
+</p><div class="message-box">
+
+<form action="BURAYA_FORMSPREE_ENDPOINTİNİ_YAPIŞTIR" method="POST">
+
+<input 
+type="text" 
+name="name" 
+placeholder="Your name" 
+required
+>
+
+<input 
+type="email" 
+name="email" 
+placeholder="Your email" 
+required
+>
+
+<textarea 
+name="message" 
+placeholder="Your message for Milan..." 
+required
+></textarea>
+
+<button type="submit">
 SEND MESSAGE
-</button></div></section><!-- FOOTER --><footer><p>
+</button>
+
+</form>
+
+</div></section><!-- FOOTER --><footer><p>
 Made with ♡ for <strong>Milan Önder</strong>
 </p><p>
 Milan Önder Fan Site
