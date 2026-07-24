@@ -1,7 +1,12 @@
-<!DOCTYPE html><html lang="tr">
+<!DOCTYPE html>
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Milan Önder Fan Site</title><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Milan Önder Fan Site</title>
+
+<style>
 
 * {
     margin: 0;
@@ -241,8 +246,14 @@ section {
     border-radius: 18px;
 }
 
+.message-box form {
+    display: block;
+    width: 100%;
+}
+
 input,
 textarea {
+    display: block;
     width: 100%;
     background: #222229;
     border: 1px solid #33333d;
@@ -251,14 +262,21 @@ textarea {
     margin-bottom: 15px;
     border-radius: 8px;
     font-family: inherit;
+    font-size: 16px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
 }
 
 textarea {
     height: 150px;
-    resize: none;
+    resize: vertical;
 }
 
 button {
+    display: block;
     width: 100%;
     padding: 15px;
     background: white;
@@ -267,6 +285,7 @@ button {
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
+    font-size: 15px;
 }
 
 button:hover {
@@ -324,109 +343,289 @@ footer strong {
 
 }
 
-</style></head><body><!-- NAVIGATION --><nav><div class="logo">
+</style>
+
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="logo">
 MILAN ÖNDER
-</div><ul><li>
+</div>
+
+<ul>
+
+<li>
 <a href="#about">ABOUT</a>
-</li><li>
+</li>
+
+<li>
 <a href="#gallery">GALLERY</a>
-</li><li>
+</li>
+
+<li>
 <a href="#birthday">BIRTHDAY</a>
-</li><li>
+</li>
+
+<li>
 <a href="#message">MESSAGE</a>
-</li></ul></nav><!-- HERO --><header class="hero"><div class="hero-content"><h1>
+</li>
+
+</ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="hero-content">
+
+<h1>
 MILAN<br>ÖNDER
-</h1><p>
+</h1>
+
+<p>
 A fan-made space created with love for Milan Önder.
-</p></div></header><!-- ABOUT --><section id="about"><h2 class="section-title">
+</p>
+
+</div>
+
+</header>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">
 About Milan
-</h2><p class="section-subtitle">
+</h2>
+
+<p class="section-subtitle">
 A few things fans love about him.
-</p><p class="about-text">Milan Önder, 28 Eylül 2004 doğumlu, Rusya'da doğup Ayvalık'ta büyümüştür.
+</p>
+
+<p class="about-text">
+
+Milan Önder, 28 Eylül 2004 doğumlu, Rusya'da doğup Ayvalık'ta büyümüştür.
 Annesi Rus, babası Türk'tür ve Ivan adında bir kardeşi vardır.
 
 Crush grubunun üyelerinden biri olan Milan, gruba kabul edilen
 7. üye olarak açıklanmıştır.
 
-</p></section><!-- FACTS --><section><h2 class="section-title">
+</p>
+
+</section>
+
+
+<!-- FACTS -->
+
+<section>
+
+<h2 class="section-title">
 Milan in a Few Facts
-</h2><div class="facts"><div class="fact">
+</h2>
+
+<div class="facts">
+
+<div class="fact">
 <h3>🎂 Birthday</h3>
 <p>28 September 2004</p>
-</div><div class="fact">
+</div>
+
+<div class="fact">
 <h3>🌍 Born</h3>
 <p>Russia</p>
-</div><div class="fact">
+</div>
+
+<div class="fact">
 <h3>🌊 Grew Up</h3>
 <p>Ayvalık, Türkiye</p>
-</div><div class="fact">
+</div>
+
+<div class="fact">
 <h3>🎤 Group</h3>
 <p>Crush</p>
-</div><div class="fact">
+</div>
+
+<div class="fact">
 <h3>🎵 Favorite Artist</h3>
 <p>Frank Ocean</p>
-</div><div class="fact">
+</div>
+
+<div class="fact">
 <h3>🖤 Favorite Song</h3>
 <p>Godspeed</p>
-</div></div></section><!-- GALLERY --><section id="gallery"><h2 class="section-title">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<h2 class="section-title">
 Gallery
-</h2><p class="section-subtitle">
+</h2>
+
+<p class="section-subtitle">
 Moments of Milan, collected by fans. ♡
-</p><div class="gallery"><img src="milan-gallery-1.png" alt="Milan Önder"><img src="milan-gallery-2.jpg" alt="Milan Önder"><img src="milan-gallery-3.jpg" alt="Milan Önder"></div></section><!-- BIRTHDAY --><section id="birthday"><div class="birthday"><h2>
+</p>
+
+<div class="gallery">
+
+<img src="milan-gallery-1.png" alt="Milan Önder">
+
+<img src="milan-gallery-2.jpg" alt="Milan Önder">
+
+<img src="milan-gallery-3.jpg" alt="Milan Önder">
+
+</div>
+
+</section>
+
+
+<!-- BIRTHDAY -->
+
+<section id="birthday">
+
+<div class="birthday">
+
+<h2>
 🎂 Milan's Birthday
-</h2><p>
+</h2>
+
+<p>
 28 September 2004
-</p><div class="countdown"><div class="time-box">
+</p>
+
+<div class="countdown">
+
+<div class="time-box">
 <span id="days">0</span>
 <small>DAYS</small>
-</div><div class="time-box">
+</div>
+
+<div class="time-box">
 <span id="hours">0</span>
 <small>HOURS</small>
-</div><div class="time-box">
+</div>
+
+<div class="time-box">
 <span id="minutes">0</span>
 <small>MINUTES</small>
-</div><div class="time-box">
+</div>
+
+<div class="time-box">
 <span id="seconds">0</span>
 <small>SECONDS</small>
-</div></div></div></section><!-- MUSIC --><section class="music"><div class="music-card"><h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MUSIC -->
+
+<section class="music">
+
+<div class="music-card">
+
+<h3>
 🎵 Godspeed
-</h3><p>
+</h3>
+
+<p>
 Frank Ocean's "Godspeed" holds a special place in Milan's story.
 A song remembered by fans and connected to a meaningful tattoo.
-</p></div></section><!-- MESSAGE --><section id="message"><h2 class="section-title">
+</p>
+
+</div>
+
+</section>
+
+
+<!-- MESSAGE -->
+
+<section id="message">
+
+<h2 class="section-title">
 Leave a Message
-</h2><p class="section-subtitle">
+</h2>
+
+<p class="section-subtitle">
 Write something you'd like to say to Milan. ♡
-</p><div class="message-box"><form
+</p>
+
+<div class="message-box">
+
+<form
 action="https://formspree.io/f/mdaqwgrq"
 method="POST"
-><input
+>
+
+<input
 type="text"
 name="name"
 placeholder="Your name"
 required
-
-«»
+>
 
 <input
 type="email"
 name="email"
 placeholder="Your email"
 required
-
-«»
+>
 
 <textarea
 name="message"
 placeholder="Your message for Milan..."
 required
-></textarea><button type="submit">
+></textarea>
+
+<button type="submit">
 SEND MESSAGE
-</button></form></div></section><!-- FOOTER --><footer><p>
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
 Made with ♡ for <strong>Milan Önder</strong>
-</p><p>
+</p>
+
+<p>
 Milan Önder Fan Site
-</p></footer><!-- COUNTDOWN --><script>
+</p>
+
+</footer>
+
+
+<!-- COUNTDOWN -->
+
+<script>
 
 function updateCountdown() {
 
@@ -508,4 +707,9 @@ updateCountdown,
 
 updateCountdown();
 
-</script></body></html>
+</script>
+
+
+</body>
+
+</html>
