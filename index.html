@@ -11,6 +11,10 @@
 
 <style>
 
+/* =========================
+   GENERAL
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +32,13 @@ body {
     line-height: 1.6;
 }
 
-/* NAVIGATION */
+a {
+    color: inherit;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
     position: fixed;
@@ -38,6 +48,7 @@ nav {
     background: rgba(8,8,11,0.94);
     backdrop-filter: blur(10px);
     padding: 18px 30px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,7 +76,9 @@ nav a:hover {
     opacity: 0.6;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     height: 100vh;
@@ -103,7 +116,9 @@ nav a:hover {
     color: #dddddd;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 section {
     padding: 100px 8%;
@@ -121,7 +136,9 @@ section {
     margin-bottom: 50px;
 }
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 
 .about-text {
     max-width: 800px;
@@ -129,11 +146,17 @@ section {
     font-size: 18px;
 }
 
-/* FACTS */
+/* =========================
+   FACTS
+========================= */
 
 .facts {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+
     gap: 20px;
 }
 
@@ -153,11 +176,17 @@ section {
     color: #aaa;
 }
 
-/* GALLERY */
+/* =========================
+   GALLERY
+========================= */
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
     gap: 20px;
 }
 
@@ -166,6 +195,7 @@ section {
     height: 380px;
     object-fit: cover;
     border-radius: 15px;
+
     transition: transform 0.4s ease;
 }
 
@@ -173,7 +203,9 @@ section {
     transform: scale(1.03);
 }
 
-/* BIRTHDAY */
+/* =========================
+   BIRTHDAY COUNTDOWN
+========================= */
 
 .birthday {
     text-align: center;
@@ -216,7 +248,9 @@ section {
     color: #999;
 }
 
-/* MUSIC */
+/* =========================
+   MUSIC
+========================= */
 
 .music {
     text-align: center;
@@ -239,7 +273,55 @@ section {
     color: #aaa;
 }
 
-/* MESSAGES */
+/* =========================
+   SOCIAL MEDIA
+========================= */
+
+.social-section {
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+    flex-wrap: wrap;
+
+    margin-top: 35px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    background: #141419;
+    border: 1px solid #292932;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    background: #222229;
+}
+
+/* =========================
+   MESSAGES
+========================= */
 
 .message-area {
     max-width: 750px;
@@ -254,8 +336,6 @@ section {
     text-align: center;
 }
 
-/* WEBYNIZE */
-
 .wbnz-comments {
     background: #141419;
     border-radius: 18px;
@@ -263,7 +343,9 @@ section {
     min-height: 200px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     text-align: center;
@@ -276,7 +358,122 @@ footer strong {
     color: white;
 }
 
-/* MOBILE */
+/* =========================
+   BIRTHDAY SPECIAL SCREEN
+========================= */
+
+#birthday-special {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 9999;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #262631 0%,
+        #08080b 65%
+    );
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    animation: birthdayFade 1s ease;
+}
+
+.birthday-special-content {
+    max-width: 700px;
+}
+
+.birthday-special-content .emoji {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.birthday-special-content h1 {
+    font-size: clamp(
+        42px,
+        8vw,
+        90px
+    );
+
+    line-height: 1.1;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.birthday-special-content p {
+    color: #cccccc;
+
+    font-size: 20px;
+
+    margin-bottom: 35px;
+}
+
+.birthday-special-button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    border: 1px solid #555;
+
+    border-radius: 30px;
+
+    color: white;
+
+    text-decoration: none;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.05
+    );
+
+    transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.birthday-special-button:hover {
+    background: rgba(
+        255,
+        255,
+        255,
+        0.12
+    );
+
+    transform: translateY(-3px);
+}
+
+@keyframes birthdayFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:700px) {
 
@@ -289,11 +486,11 @@ footer strong {
     }
 
     nav a {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .logo {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .hero {
@@ -312,16 +509,65 @@ footer strong {
         height: 420px;
     }
 
+    .social-link {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .birthday-special-content .emoji {
+        font-size: 50px;
+    }
+
 }
 
 </style>
 
 </head>
 
+
 <body>
 
 
-<!-- NAVIGATION -->
+<!-- =========================
+     BIRTHDAY SPECIAL SCREEN
+========================= -->
+
+<div id="birthday-special">
+
+<div class="birthday-special-content">
+
+<div class="emoji">
+🎂✨🎉
+</div>
+
+<h1>
+HAPPY BIRTHDAY<br>
+MILAN!
+</h1>
+
+<p>
+Today is Milan's special day. 🖤
+<br>
+Wishing you a beautiful year filled with happiness,
+music and unforgettable moments.
+</p>
+
+<a
+href="#message"
+class="birthday-special-button"
+onclick="closeBirthdayScreen()"
+>
+💌 SEND A BIRTHDAY MESSAGE
+</a>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
@@ -332,19 +578,27 @@ MILAN ÖNDER
 <ul>
 
 <li>
-<a href="#about">ABOUT</a>
+<a href="#about">
+ABOUT
+</a>
 </li>
 
 <li>
-<a href="#gallery">GALLERY</a>
+<a href="#gallery">
+GALLERY
+</a>
 </li>
 
 <li>
-<a href="#birthday">BIRTHDAY</a>
+<a href="#birthday">
+BIRTHDAY
+</a>
 </li>
 
 <li>
-<a href="#message">MESSAGE</a>
+<a href="#message">
+MESSAGE
+</a>
 </li>
 
 </ul>
@@ -352,14 +606,17 @@ MILAN ÖNDER
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero">
 
 <div class="hero-content">
 
 <h1>
-MILAN<br>ÖNDER
+MILAN<br>
+ÖNDER
 </h1>
 
 <p>
@@ -371,7 +628,9 @@ A fan-made space created with love for Milan Önder.
 </header>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
@@ -385,18 +644,22 @@ A few things fans love about him.
 
 <p class="about-text">
 
-Milan Önder, 28 Eylül 2004 doğumlu, Rusya'da doğup Ayvalık'ta büyümüştür.
-Annesi Rus, babası Türk'tür ve Ivan adında bir kardeşi vardır.
+Milan Önder, 28 Eylül 2004 doğumlu,
+Rusya'da doğup Ayvalık'ta büyümüştür.
+Annesi Rus, babası Türk'tür ve
+Ivan adında bir kardeşi vardır.
 
-Crush grubunun üyelerinden biri olan Milan, gruba kabul edilen
-7. üye olarak açıklanmıştır.
+Crush grubunun üyelerinden biri olan Milan,
+gruba kabul edilen 7. üye olarak açıklanmıştır.
 
 </p>
 
 </section>
 
 
-<!-- FACTS -->
+<!-- =========================
+     FACTS
+========================= -->
 
 <section>
 
@@ -408,32 +671,44 @@ Milan in a Few Facts
 
 <div class="fact">
 <h3>🎂 Birthday</h3>
-<p>28 September 2004</p>
+<p>
+28 September 2004
+</p>
 </div>
 
 <div class="fact">
 <h3>🌍 Born</h3>
-<p>Russia</p>
+<p>
+Russia
+</p>
 </div>
 
 <div class="fact">
 <h3>🌊 Grew Up</h3>
-<p>Ayvalık, Türkiye</p>
+<p>
+Ayvalık, Türkiye
+</p>
 </div>
 
 <div class="fact">
 <h3>🎤 Group</h3>
-<p>Crush</p>
+<p>
+Crush
+</p>
 </div>
 
 <div class="fact">
 <h3>🎵 Favorite Artist</h3>
-<p>Frank Ocean</p>
+<p>
+Frank Ocean
+</p>
 </div>
 
 <div class="fact">
 <h3>🖤 Favorite Song</h3>
-<p>Godspeed</p>
+<p>
+Godspeed
+</p>
 </div>
 
 </div>
@@ -441,7 +716,9 @@ Milan in a Few Facts
 </section>
 
 
-<!-- GALLERY -->
+<!-- =========================
+     GALLERY
+========================= -->
 
 <section id="gallery">
 
@@ -455,18 +732,29 @@ Moments of Milan, collected by fans. ♡
 
 <div class="gallery">
 
-<img src="milan-gallery-1.png" alt="Milan Önder">
+<img
+src="milan-gallery-1.png"
+alt="Milan Önder"
+>
 
-<img src="milan-gallery-2.jpg" alt="Milan Önder">
+<img
+src="milan-gallery-2.jpg"
+alt="Milan Önder"
+>
 
-<img src="milan-gallery-3.jpg" alt="Milan Önder">
+<img
+src="milan-gallery-3.jpg"
+alt="Milan Önder"
+>
 
 </div>
 
 </section>
 
 
-<!-- BIRTHDAY -->
+<!-- =========================
+     BIRTHDAY COUNTDOWN
+========================= -->
 
 <section id="birthday">
 
@@ -483,23 +771,54 @@ Moments of Milan, collected by fans. ♡
 <div class="countdown">
 
 <div class="time-box">
-<span id="days">0</span>
-<small>DAYS</small>
+
+<span id="days">
+0
+</span>
+
+<small>
+DAYS
+</small>
+
 </div>
 
-<div class="time-box">
-<span id="hours">0</span>
-<small>HOURS</small>
-</div>
 
 <div class="time-box">
-<span id="minutes">0</span>
-<small>MINUTES</small>
+
+<span id="hours">
+0
+</span>
+
+<small>
+HOURS
+</small>
+
 </div>
 
+
 <div class="time-box">
-<span id="seconds">0</span>
-<small>SECONDS</small>
+
+<span id="minutes">
+0
+</span>
+
+<small>
+MINUTES
+</small>
+
+</div>
+
+
+<div class="time-box">
+
+<span id="seconds">
+0
+</span>
+
+<small>
+SECONDS
+</small>
+
 </div>
 
 </div>
@@ -509,7 +828,9 @@ Moments of Milan, collected by fans. ♡
 </section>
 
 
-<!-- MUSIC -->
+<!-- =========================
+     MUSIC
+========================= -->
 
 <section class="music">
 
@@ -520,8 +841,13 @@ Moments of Milan, collected by fans. ♡
 </h3>
 
 <p>
-Frank Ocean's "Godspeed" holds a special place in Milan's story.
-A song remembered by fans and connected to a meaningful tattoo.
+
+Frank Ocean's "Godspeed" holds a special place
+in Milan's story.
+
+A song remembered by fans and connected
+to a meaningful tattoo.
+
 </p>
 
 </div>
@@ -529,7 +855,72 @@ A song remembered by fans and connected to a meaningful tattoo.
 </section>
 
 
-<!-- MESSAGES FOR MILAN -->
+<!-- =========================
+     SOCIAL MEDIA
+========================= -->
+
+<section class="social-section">
+
+<h2 class="section-title">
+Follow Milan
+</h2>
+
+<p class="section-subtitle">
+Follow Milan and support him on social media. ♡
+</p>
+
+
+<div class="social-links">
+
+
+<a
+class="social-link"
+href="https://www.instagram.com/milanonderr/"
+target="_blank"
+rel="noopener"
+>
+📸 Instagram
+</a>
+
+
+<a
+class="social-link"
+href="https://x.com/milan_onde32094"
+target="_blank"
+rel="noopener"
+>
+𝕏 X / Twitter
+</a>
+
+
+<a
+class="social-link"
+href="https://www.tiktok.com/@milanonder"
+target="_blank"
+rel="noopener"
+>
+🎵 TikTok
+</a>
+
+
+<a
+class="social-link"
+href="https://open.spotify.com/artist/6H4fK0pTozmBGLQye7VHOe"
+target="_blank"
+rel="noopener"
+>
+🎧 Spotify
+</a>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     MESSAGES FOR MILAN
+========================= -->
 
 <section id="message">
 
@@ -540,22 +931,35 @@ Messages for Milan 💌
 </h2>
 
 <p class="section-subtitle">
-Write something you'd like to say to Milan. Your message will appear here. ♡
+
+Write something you'd like to say to Milan.
+Your message will appear here. ♡
+
 </p>
 
-<div class="wbnz-comments" data-webynize-id="11946"></div>
+
+<div
+class="wbnz-comments"
+data-webynize-id="11946">
+</div>
+
 
 </div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
 <p>
-Made with ♡ for <strong>Milan Önder</strong>
+Made with ♡ for
+<strong>
+Milan Önder
+</strong>
 </p>
 
 <p>
@@ -565,7 +969,9 @@ Milan Önder Fan Site
 </footer>
 
 
-<!-- BIRTHDAY COUNTDOWN -->
+<!-- =========================
+     BIRTHDAY COUNTDOWN SCRIPT
+========================= -->
 
 <script>
 
@@ -573,9 +979,11 @@ function updateCountdown() {
 
 const now = new Date();
 
-let year = now.getFullYear();
+let year =
+now.getFullYear();
 
-let birthday = new Date(
+let birthday =
+new Date(
 year,
 8,
 28,
@@ -584,9 +992,11 @@ year,
 0
 );
 
+
 if (now > birthday) {
 
-birthday = new Date(
+birthday =
+new Date(
 year + 1,
 8,
 28,
@@ -597,8 +1007,10 @@ year + 1,
 
 }
 
+
 const difference =
 birthday - now;
+
 
 const days =
 Math.floor(
@@ -606,11 +1018,13 @@ difference /
 (1000 * 60 * 60 * 24)
 );
 
+
 const hours =
 Math.floor(
 (difference /
 (1000 * 60 * 60)) % 24
 );
+
 
 const minutes =
 Math.floor(
@@ -618,41 +1032,104 @@ Math.floor(
 (1000 * 60)) % 60
 );
 
+
 const seconds =
 Math.floor(
 (difference /
 1000) % 60
 );
 
-document.getElementById(
-"days"
-).textContent = days;
 
-document.getElementById(
-"hours"
-).textContent = hours;
+document
+.getElementById("days")
+.textContent =
+days;
 
-document.getElementById(
-"minutes"
-).textContent = minutes;
 
-document.getElementById(
-"seconds"
-).textContent = seconds;
+document
+.getElementById("hours")
+.textContent =
+hours;
+
+
+document
+.getElementById("minutes")
+.textContent =
+minutes;
+
+
+document
+.getElementById("seconds")
+.textContent =
+seconds;
 
 }
+
 
 setInterval(
 updateCountdown,
 1000
 );
 
+
 updateCountdown();
+
+
+/* =========================
+   BIRTHDAY SPECIAL SCREEN
+========================= */
+
+function checkBirthday() {
+
+const now =
+new Date();
+
+
+const month =
+now.getMonth();
+
+
+const day =
+now.getDate();
+
+
+if (
+month === 8 &&
+day === 28
+) {
+
+document
+.getElementById(
+"birthday-special"
+)
+.style.display =
+"flex";
+
+}
+
+}
+
+
+function closeBirthdayScreen() {
+
+document
+.getElementById(
+"birthday-special"
+)
+.style.display =
+"none";
+
+}
+
+
+checkBirthday();
 
 </script>
 
 
-<!-- WEBYNIZE COMMENTS -->
+<!-- =========================
+     WEBYNIZE COMMENTS
+========================= -->
 
 <script
 defer
