@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Milan Önder Fan Site</title>
@@ -63,7 +60,7 @@ body.light-mode {
 }
 
 body.light-mode nav {
-    background: rgba(255,255,255,0.92);
+    background: rgba(255,255,255,0.94);
 }
 
 body.light-mode nav a {
@@ -72,18 +69,15 @@ body.light-mode nav a {
 
 body.light-mode .fact,
 body.light-mode .birthday,
-body.light-mode .music-card,
 body.light-mode .music-card-small,
-body.light-mode .wbnz-comments,
-body.light-mode .social-link,
-body.light-mode .message-area {
-    background: #ffffff;
-    border-color: #dddddd;
+body.light-mode .message-area,
+body.light-mode .quiz-container,
+body.light-mode .social-link {
+    background: white;
+    border-color: #ddd;
 }
 
-body.light-mode .about-text,
-body.light-mode .music-card p,
-body.light-mode .music-card-small p {
+body.light-mode .about-text {
     color: #555;
 }
 
@@ -96,7 +90,8 @@ body.light-mode footer {
     color: #666;
 }
 
-body.light-mode footer strong {
+body.light-mode footer strong,
+body.light-mode footer .made-by {
     color: #111;
 }
 
@@ -164,13 +159,13 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 20px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 nav a:hover {
@@ -178,7 +173,7 @@ nav a:hover {
 }
 
 /* =========================
-   HERO / WELCOME
+   HERO
 ========================= */
 
 .hero {
@@ -311,6 +306,7 @@ nav a:hover {
     height: 380px;
     object-fit: cover;
     border-radius: 15px;
+
     transition: transform 0.4s ease;
 }
 
@@ -319,7 +315,7 @@ nav a:hover {
 }
 
 /* =========================
-   BIRTHDAY COUNTDOWN
+   BIRTHDAY
 ========================= */
 
 .birthday {
@@ -364,7 +360,113 @@ nav a:hover {
 }
 
 /* =========================
-   MUSIC CORNER
+   TRIVIA
+========================= */
+
+.quiz-container {
+    max-width: 850px;
+    margin: auto;
+
+    background: #141419;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    border: 1px solid #25252d;
+}
+
+.quiz-question {
+    margin-bottom: 35px;
+}
+
+.quiz-question h3 {
+    margin-bottom: 18px;
+    font-size: 19px;
+}
+
+.option {
+    display: block;
+
+    padding: 13px 16px;
+
+    margin: 8px 0;
+
+    border: 1px solid #303039;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.option:hover {
+    background: rgba(255,255,255,0.07);
+}
+
+.option input {
+    margin-right: 10px;
+}
+
+.quiz-button {
+    display: block;
+
+    margin: 20px auto 0;
+
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: white;
+
+    color: black;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: transform 0.3s ease;
+}
+
+.quiz-button:hover {
+    transform: translateY(-3px);
+}
+
+#quiz-result {
+    display: none;
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background: #222229;
+
+    text-align: center;
+}
+
+.quiz-review {
+    margin-top: 20px;
+    text-align: left;
+    color: #ccc;
+}
+
+.correct {
+    color: #8ee28e;
+}
+
+.wrong {
+    color: #ff8585;
+}
+
+/* =========================
+   MUSIC
 ========================= */
 
 .music {
@@ -373,18 +475,25 @@ nav a:hover {
 
 .music-grid {
     display: grid;
-    grid-template-columns: repeat(
+
+    grid-template-columns:
+    repeat(
         auto-fit,
         minmax(280px, 1fr)
     );
+
     gap: 25px;
 }
 
 .music-card-small {
     background: #141419;
+
     padding: 35px;
+
     border-radius: 20px;
+
     border: 1px solid #25252d;
+
     transition: transform 0.3s ease;
 }
 
@@ -404,17 +513,24 @@ nav a:hover {
 
 .music-card-small p {
     color: #aaa;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .spotify-button {
     display: inline-block;
+
     padding: 12px 24px;
+
     border-radius: 25px;
+
     background: #1db954;
+
     color: white;
+
     text-decoration: none;
+
     font-weight: bold;
+
     transition: transform 0.3s ease;
 }
 
@@ -423,7 +539,7 @@ nav a:hover {
 }
 
 /* =========================
-   SOCIAL MEDIA
+   SOCIAL
 ========================= */
 
 .social-section {
@@ -434,13 +550,17 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+
     gap: 15px;
+
     flex-wrap: wrap;
+
     margin-top: 35px;
 }
 
 .social-link {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -449,11 +569,13 @@ nav a:hover {
     border-radius: 30px;
 
     background: #141419;
+
     border: 1px solid #292932;
 
     text-decoration: none;
 
     font-size: 15px;
+
     font-weight: bold;
 
     transition:
@@ -463,6 +585,7 @@ nav a:hover {
 
 .social-link:hover {
     transform: translateY(-5px);
+
     background: #222229;
 }
 
@@ -472,6 +595,7 @@ nav a:hover {
 
 .message-area {
     max-width: 850px;
+
     margin: auto;
 
     background: #141419;
@@ -481,9 +605,6 @@ nav a:hover {
     border-radius: 25px;
 
     border: 1px solid #25252d;
-
-    box-shadow:
-    0 20px 60px rgba(0,0,0,0.25);
 }
 
 .message-area .section-title {
@@ -496,8 +617,11 @@ nav a:hover {
 
 .wbnz-comments {
     background: #0f0f13;
+
     border-radius: 18px;
+
     padding: 25px;
+
     min-height: 200px;
 }
 
@@ -507,15 +631,21 @@ nav a:hover {
 
 footer {
     text-align: center;
+
     padding: 70px 20px;
+
     background: #050507;
+
     color: #777;
 }
 
 footer .made-by {
     font-size: 24px;
+
     color: white;
+
     margin-bottom: 15px;
+
     letter-spacing: 2px;
 }
 
@@ -524,7 +654,7 @@ footer strong {
 }
 
 /* =========================
-   BIRTHDAY SPECIAL SCREEN
+   BIRTHDAY SPECIAL
 ========================= */
 
 #birthday-special {
@@ -548,6 +678,7 @@ footer strong {
     );
 
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -563,6 +694,7 @@ footer strong {
 
 .birthday-special-content .emoji {
     font-size: 70px;
+
     margin-bottom: 20px;
 }
 
@@ -607,21 +739,6 @@ footer strong {
         255,
         0.05
     );
-
-    transition:
-    background 0.3s ease,
-    transform 0.3s ease;
-}
-
-.birthday-special-button:hover {
-    background: rgba(
-        255,
-        255,
-        255,
-        0.12
-    );
-
-    transform: translateY(-3px);
 }
 
 @keyframes birthdayFade {
@@ -647,15 +764,15 @@ footer strong {
     }
 
     nav ul {
-        gap: 10px;
+        gap: 8px;
     }
 
     nav a {
-        font-size: 9px;
+        font-size: 8px;
     }
 
     .logo {
-        font-size: 12px;
+        font-size: 11px;
         letter-spacing: 1px;
     }
 
@@ -688,7 +805,8 @@ footer strong {
         max-width: 300px;
     }
 
-    .message-area {
+    .message-area,
+    .quiz-container {
         padding: 25px 15px;
     }
 
@@ -699,16 +817,13 @@ footer strong {
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =========================
-     THEME TOGGLE
-========================= -->
+<!-- THEME BUTTON -->
 
 <button
 class="theme-toggle"
@@ -719,9 +834,7 @@ title="Change theme"
 </button>
 
 
-<!-- =========================
-     BIRTHDAY SPECIAL SCREEN
-========================= -->
+<!-- BIRTHDAY SPECIAL SCREEN -->
 
 <div id="birthday-special">
 
@@ -756,9 +869,7 @@ onclick="closeBirthdayScreen()"
 </div>
 
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -787,6 +898,12 @@ BIRTHDAY
 </li>
 
 <li>
+<a href="#trivia">
+TRIVIA
+</a>
+</li>
+
+<li>
 <a href="#music">
 MUSIC
 </a>
@@ -803,9 +920,7 @@ MESSAGE
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <header class="hero">
 
@@ -845,9 +960,7 @@ EXPLORE THE SITE ↓
 </header>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ABOUT -->
 
 <section id="about">
 
@@ -861,7 +974,7 @@ A few things fans love about him.
 
 <p class="about-text">
 
-Milan Önder, 28 Eylül 2004 doğumlu,
+Milan Önder, 28 Eylül 2004 doğumludur,
 Rusya'da doğup Ayvalık'ta büyümüştür.
 Annesi Rus, babası Türk'tür ve
 Ivan adında bir kardeşi vardır.
@@ -874,9 +987,7 @@ gruba kabul edilen 7. üye olarak açıklanmıştır.
 </section>
 
 
-<!-- =========================
-     FACTS
-========================= -->
+<!-- FACTS -->
 
 <section>
 
@@ -924,7 +1035,7 @@ Frank Ocean
 <div class="fact">
 <h3>🖤 Favorite Song</h3>
 <p>
-Godspeed
+Self Control
 </p>
 </div>
 
@@ -933,9 +1044,7 @@ Godspeed
 </section>
 
 
-<!-- =========================
-     GALLERY
-========================= -->
+<!-- GALLERY -->
 
 <section id="gallery">
 
@@ -969,9 +1078,7 @@ alt="Milan Önder"
 </section>
 
 
-<!-- =========================
-     BIRTHDAY COUNTDOWN
-========================= -->
+<!-- BIRTHDAY COUNTDOWN -->
 
 <section id="birthday">
 
@@ -988,54 +1095,23 @@ alt="Milan Önder"
 <div class="countdown">
 
 <div class="time-box">
-
-<span id="days">
-0
-</span>
-
-<small>
-DAYS
-</small>
-
+<span id="days">0</span>
+<small>DAYS</small>
 </div>
 
-
 <div class="time-box">
-
-<span id="hours">
-0
-</span>
-
-<small>
-HOURS
-</small>
-
+<span id="hours">0</span>
+<small>HOURS</small>
 </div>
 
-
 <div class="time-box">
-
-<span id="minutes">
-0
-</span>
-
-<small>
-MINUTES
-</small>
-
+<span id="minutes">0</span>
+<small>MINUTES</small>
 </div>
 
-
 <div class="time-box">
-
-<span id="seconds">
-0
-</span>
-
-<small>
-SECONDS
-</small>
-
+<span id="seconds">0</span>
+<small>SECONDS</small>
 </div>
 
 </div>
@@ -1045,9 +1121,183 @@ SECONDS
 </section>
 
 
-<!-- =========================
-     MUSIC CORNER
-========================= -->
+<!-- MILAN TRIVIA -->
+
+<section id="trivia">
+
+<h2 class="section-title">
+🖤 Milan Trivia
+</h2>
+
+<p class="section-subtitle">
+How well do you know Milan? Test your Homie knowledge! ♡
+</p>
+
+<div class="quiz-container">
+
+
+<div class="quiz-question">
+
+<h3>
+1. Hangisi bir Milan Önder sözü değildir?
+</h3>
+
+<label class="option">
+<input type="radio" name="q1" value="A">
+A) My homie
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="B">
+B) Sabır erdemdir
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="C">
+C) Rabarbacılar
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="D">
+D) Sıkıcı bir soru oldu
+</label>
+
+</div>
+
+
+<div class="quiz-question">
+
+<h3>
+2. Milan'ın final performansında giydiği formanın üzerindeki rakam kaçtı?
+</h3>
+
+<label class="option">
+<input type="radio" name="q2" value="A">
+A) 24
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="B">
+B) 17
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="C">
+C) 20
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="D">
+D) 13
+</label>
+
+</div>
+
+
+<div class="quiz-question">
+
+<h3>
+3. Milan'ın en sevdiği F1 pilotu kimdir?
+</h3>
+
+<label class="option">
+<input type="radio" name="q3" value="A">
+A) Sainz
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="B">
+B) Leclerc
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="C">
+C) Hamilton
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="D">
+D) Verstappen
+</label>
+
+</div>
+
+
+<div class="quiz-question">
+
+<h3>
+4. Milan'ın en sevdiği Frank Ocean şarkısı hangisidir?
+</h3>
+
+<label class="option">
+<input type="radio" name="q4" value="A">
+A) Godspeed
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="B">
+B) Self Control
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="C">
+C) White Ferrari
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="D">
+D) Lost
+</label>
+
+</div>
+
+
+<div class="quiz-question">
+
+<h3>
+5. Milan kaç yastıkla uyur?
+</h3>
+
+<label class="option">
+<input type="radio" name="q5" value="A">
+A) 1
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="B">
+B) 2
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="C">
+C) 3
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="D">
+D) 4
+</label>
+
+</div>
+
+
+<button
+class="quiz-button"
+onclick="checkQuiz()"
+>
+CHECK MY SCORE ♡
+</button>
+
+
+<div id="quiz-result"></div>
+
+
+</div>
+
+</section>
+
+
+<!-- MUSIC CORNER -->
 
 <section
 id="music"
@@ -1080,9 +1330,8 @@ Frank Ocean
 </p>
 
 <p>
-A song that holds a special place
-in Milan's story and is connected
-to one of his meaningful tattoos.
+A special song connected
+to one of Milan's meaningful tattoos.
 </p>
 
 <a
@@ -1133,9 +1382,7 @@ rel="noopener"
 </section>
 
 
-<!-- =========================
-     SOCIAL MEDIA
-========================= -->
+<!-- SOCIAL MEDIA -->
 
 <section class="social-section">
 
@@ -1195,9 +1442,7 @@ rel="noopener"
 </section>
 
 
-<!-- =========================
-     MESSAGES FOR MILAN
-========================= -->
+<!-- MESSAGES -->
 
 <section id="message">
 
@@ -1226,9 +1471,7 @@ data-webynize-id="11946">
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1250,9 +1493,7 @@ Milan Önder Fan Site
 </footer>
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
+<!-- JAVASCRIPT -->
 
 <script>
 
@@ -1262,38 +1503,38 @@ Milan Önder Fan Site
 
 function toggleTheme() {
 
-document.body.classList.toggle(
-"light-mode"
-);
+    document.body.classList.toggle(
+        "light-mode"
+    );
 
-const button =
-document.querySelector(
-".theme-toggle"
-);
+    const button =
+        document.querySelector(
+            ".theme-toggle"
+        );
 
-if (
-document.body.classList.contains(
-"light-mode"
-)
-) {
+    if (
+        document.body.classList.contains(
+            "light-mode"
+        )
+    ) {
 
-button.textContent = "☀️";
+        button.textContent = "☀️";
 
-localStorage.setItem(
-"theme",
-"light"
-);
+        localStorage.setItem(
+            "theme",
+            "light"
+        );
 
-} else {
+    } else {
 
-button.textContent = "🌙";
+        button.textContent = "🌙";
 
-localStorage.setItem(
-"theme",
-"dark"
-);
+        localStorage.setItem(
+            "theme",
+            "dark"
+        );
 
-}
+    }
 
 }
 
@@ -1301,21 +1542,162 @@ localStorage.setItem(
 /* LOAD SAVED THEME */
 
 const savedTheme =
-localStorage.getItem(
-"theme"
-);
+    localStorage.getItem(
+        "theme"
+    );
 
 if (
-savedTheme === "light"
+    savedTheme === "light"
 ) {
 
-document.body.classList.add(
-"light-mode"
-);
+    document.body.classList.add(
+        "light-mode"
+    );
 
-document.querySelector(
-".theme-toggle"
-).textContent = "☀️";
+    document.querySelector(
+        ".theme-toggle"
+    ).textContent = "☀️";
+
+}
+
+
+/* =========================
+   TRIVIA
+========================= */
+
+function checkQuiz() {
+
+    const answers = {
+
+        q1: "C",
+        q2: "D",
+        q3: "A",
+        q4: "B",
+        q5: "B"
+
+    };
+
+    const questions = [
+
+        "1. Hangisi bir Milan Önder sözü değildir?",
+        "2. Milan'ın final performansındaki forma numarası kaçtı?",
+        "3. Milan'ın en sevdiği F1 pilotu kimdir?",
+        "4. Milan'ın en sevdiği Frank Ocean şarkısı hangisidir?",
+        "5. Milan kaç yastıkla uyur?"
+
+    ];
+
+    let score = 0;
+
+    let review = "";
+
+    for (
+        let i = 1;
+        i <= 5;
+        i++
+    ) {
+
+        const selected =
+            document.querySelector(
+                'input[name="q' + i + '"]:checked'
+            );
+
+        if (!selected) {
+
+            alert(
+                "Please answer all questions first! 🖤"
+            );
+
+            return;
+
+        }
+
+        if (
+            selected.value ===
+            answers["q" + i]
+        ) {
+
+            score++;
+
+            review +=
+            '<p class="correct">✓ ' +
+            questions[i - 1] +
+            "</p>";
+
+        } else {
+
+            review +=
+            '<p class="wrong">✗ ' +
+            questions[i - 1] +
+            " — Correct answer: " +
+            answers["q" + i] +
+            "</p>";
+
+        }
+
+    }
+
+
+    let message = "";
+
+
+    if (score === 5) {
+
+        message =
+        "🖤 TRUE HOMIE! — Milan hakkında gerçekten her şeyi biliyorsun!";
+
+    } else if (score === 4) {
+
+        message =
+        "✨ ALMOST PERFECT! — Çok iyi bir Homie'sin!";
+
+    } else if (score === 3) {
+
+        message =
+        "🖤 NOT BAD, HOMIE! — Milan'ı biraz daha keşfetmelisin!";
+
+    } else if (score >= 1) {
+
+        message =
+        "👀 NEW HOMIE! — Daha öğrenecek çok şey var!";
+
+    } else {
+
+        message =
+        "😂 RABARBACILAR! — Trivia'yı tekrar denemelisin!";
+
+    }
+
+
+    const result =
+        document.getElementById(
+            "quiz-result"
+        );
+
+
+    result.innerHTML =
+
+    "<h2>Your Score: " +
+    score +
+    "/5 🖤</h2>" +
+
+    "<p>" +
+    message +
+    "</p>" +
+
+    '<div class="quiz-review">' +
+    review +
+    "</div>";
+
+
+    result.style.display =
+        "block";
+
+
+    result.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
 
 }
 
@@ -1326,101 +1708,107 @@ document.querySelector(
 
 function updateCountdown() {
 
-const now =
-new Date();
+    const now =
+        new Date();
 
-let year =
-now.getFullYear();
+    let year =
+        now.getFullYear();
 
-let birthday =
-new Date(
-year,
-8,
-28,
-0,
-0,
-0
-);
-
-
-if (
-now > birthday
-) {
-
-birthday =
-new Date(
-year + 1,
-8,
-28,
-0,
-0,
-0
-);
-
-}
+    let birthday =
+        new Date(
+            year,
+            8,
+            28,
+            0,
+            0,
+            0
+        );
 
 
-const difference =
-birthday - now;
+    if (
+        now > birthday
+    ) {
+
+        birthday =
+            new Date(
+                year + 1,
+                8,
+                28,
+                0,
+                0,
+                0
+            );
+
+    }
 
 
-const days =
-Math.floor(
-difference /
-(1000 * 60 * 60 * 24)
-);
+    const difference =
+        birthday - now;
 
 
-const hours =
-Math.floor(
-(difference /
-(1000 * 60 * 60)) % 24
-);
+    const days =
+        Math.floor(
+            difference /
+            (1000 * 60 * 60 * 24)
+        );
 
 
-const minutes =
-Math.floor(
-(difference /
-(1000 * 60)) % 60
-);
+    const hours =
+        Math.floor(
+            (
+                difference /
+                (1000 * 60 * 60)
+            ) % 24
+        );
 
 
-const seconds =
-Math.floor(
-(difference /
-1000) % 60
-);
+    const minutes =
+        Math.floor(
+            (
+                difference /
+                (1000 * 60)
+            ) % 60
+        );
 
 
-document
-.getElementById("days")
-.textContent =
-days;
+    const seconds =
+        Math.floor(
+            (
+                difference /
+                1000
+            ) % 60
+        );
 
 
-document
-.getElementById("hours")
-.textContent =
-hours;
+    document
+        .getElementById("days")
+        .textContent =
+        days;
 
 
-document
-.getElementById("minutes")
-.textContent =
-minutes;
+    document
+        .getElementById("hours")
+        .textContent =
+        hours;
 
 
-document
-.getElementById("seconds")
-.textContent =
-seconds;
+    document
+        .getElementById("minutes")
+        .textContent =
+        minutes;
+
+
+    document
+        .getElementById("seconds")
+        .textContent =
+        seconds;
 
 }
 
 
 setInterval(
-updateCountdown,
-1000
+    updateCountdown,
+    1000
 );
 
 updateCountdown();
@@ -1432,41 +1820,41 @@ updateCountdown();
 
 function checkBirthday() {
 
-const now =
-new Date();
+    const now =
+        new Date();
 
-const month =
-now.getMonth();
+    const month =
+        now.getMonth();
 
-const day =
-now.getDate();
+    const day =
+        now.getDate();
 
 
-if (
-month === 8 &&
-day === 28
-) {
+    if (
+        month === 8 &&
+        day === 28
+    ) {
 
-document
-.getElementById(
-"birthday-special"
-)
-.style.display =
-"flex";
+        document
+            .getElementById(
+                "birthday-special"
+            )
+            .style.display =
+            "flex";
 
-}
+    }
 
 }
 
 
 function closeBirthdayScreen() {
 
-document
-.getElementById(
-"birthday-special"
-)
-.style.display =
-"none";
+    document
+        .getElementById(
+            "birthday-special"
+        )
+        .style.display =
+        "none";
 
 }
 
@@ -1476,9 +1864,7 @@ checkBirthday();
 </script>
 
 
-<!-- =========================
-     WEBYNIZE COMMENTS
-========================= -->
+<!-- WEBYNIZE COMMENTS -->
 
 <script
 defer
