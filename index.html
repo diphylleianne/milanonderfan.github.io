@@ -30,10 +30,109 @@ body {
     background: #08080b;
     color: white;
     line-height: 1.6;
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
 a {
     color: inherit;
+}
+
+section {
+    padding: 100px 8%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    color: #999;
+    margin-bottom: 50px;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+body.light-mode {
+    background: #f5f5f7;
+    color: #111;
+}
+
+body.light-mode nav {
+    background: rgba(255,255,255,0.92);
+}
+
+body.light-mode nav a {
+    color: #111;
+}
+
+body.light-mode .fact,
+body.light-mode .birthday,
+body.light-mode .music-card,
+body.light-mode .music-card-small,
+body.light-mode .wbnz-comments,
+body.light-mode .social-link,
+body.light-mode .message-area {
+    background: #ffffff;
+    border-color: #dddddd;
+}
+
+body.light-mode .about-text,
+body.light-mode .music-card p,
+body.light-mode .music-card-small p {
+    color: #555;
+}
+
+body.light-mode .time-box {
+    background: #eeeeF2;
+}
+
+body.light-mode footer {
+    background: #e9e9ed;
+    color: #666;
+}
+
+body.light-mode footer strong {
+    color: #111;
+}
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+.theme-toggle {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2000;
+
+    width: 52px;
+    height: 52px;
+
+    border: 1px solid #444;
+    border-radius: 50%;
+
+    background: rgba(20,20,25,0.95);
+    color: white;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+body.light-mode .theme-toggle {
+    background: white;
+    color: #111;
+    border-color: #ccc;
 }
 
 /* =========================
@@ -45,8 +144,10 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1000;
+
     background: rgba(8,8,11,0.94);
     backdrop-filter: blur(10px);
+
     padding: 18px 30px;
 
     display: flex;
@@ -77,17 +178,17 @@ nav a:hover {
 }
 
 /* =========================
-   HERO
+   HERO / WELCOME
 ========================= */
 
 .hero {
     height: 100vh;
-    min-height: 650px;
+    min-height: 700px;
 
     background-image:
     linear-gradient(
-        rgba(0,0,0,0.25),
-        rgba(0,0,0,0.9)
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.92)
     ),
     url("milan-hero.jpg");
 
@@ -101,39 +202,51 @@ nav a:hover {
 }
 
 .hero-content {
-    max-width: 700px;
+    max-width: 850px;
+}
+
+.welcome-small {
+    font-size: 15px;
+    letter-spacing: 5px;
+    color: #bbbbbb;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: clamp(50px, 9vw, 110px);
-    letter-spacing: 8px;
-    line-height: 1;
-    margin-bottom: 20px;
+    font-size: clamp(42px, 8vw, 95px);
+    letter-spacing: 5px;
+    line-height: 1.05;
+    margin-bottom: 30px;
 }
 
-.hero p {
+.hero-quote {
     font-size: 18px;
+    line-height: 1.9;
     color: #dddddd;
+    font-style: italic;
+    border-left: 2px solid #777;
+    padding-left: 20px;
+    margin-bottom: 15px;
 }
 
-/* =========================
-   SECTIONS
-========================= */
-
-section {
-    padding: 100px 8%;
-    max-width: 1200px;
-    margin: auto;
+.quote-author {
+    color: #aaa;
+    margin-bottom: 35px;
 }
 
-.section-title {
-    font-size: 42px;
-    margin-bottom: 20px;
+.explore-button {
+    display: inline-block;
+    padding: 14px 28px;
+    border: 1px solid #777;
+    border-radius: 30px;
+    text-decoration: none;
+    background: rgba(255,255,255,0.06);
+    transition: 0.3s ease;
 }
 
-.section-subtitle {
-    color: #999;
-    margin-bottom: 50px;
+.explore-button:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-3px);
 }
 
 /* =========================
@@ -156,7 +269,6 @@ section {
         auto-fit,
         minmax(220px, 1fr)
     );
-
     gap: 20px;
 }
 
@@ -165,6 +277,11 @@ section {
     padding: 30px;
     border-radius: 14px;
     border: 1px solid #25252d;
+    transition: transform 0.3s ease;
+}
+
+.fact:hover {
+    transform: translateY(-5px);
 }
 
 .fact h3 {
@@ -186,7 +303,6 @@ section {
         auto-fit,
         minmax(250px, 1fr)
     );
-
     gap: 20px;
 }
 
@@ -195,7 +311,6 @@ section {
     height: 380px;
     object-fit: cover;
     border-radius: 15px;
-
     transition: transform 0.4s ease;
 }
 
@@ -249,28 +364,62 @@ section {
 }
 
 /* =========================
-   MUSIC
+   MUSIC CORNER
 ========================= */
 
 .music {
     text-align: center;
 }
 
-.music-card {
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+    gap: 25px;
+}
+
+.music-card-small {
     background: #141419;
-    padding: 40px;
+    padding: 35px;
     border-radius: 20px;
-    max-width: 600px;
-    margin: auto;
+    border: 1px solid #25252d;
+    transition: transform 0.3s ease;
 }
 
-.music-card h3 {
-    font-size: 28px;
-    margin-bottom: 10px;
+.music-card-small:hover {
+    transform: translateY(-5px);
 }
 
-.music-card p {
+.music-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.music-card-small h3 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.music-card-small p {
     color: #aaa;
+    margin-bottom: 25px;
+}
+
+.spotify-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 25px;
+    background: #1db954;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.spotify-button:hover {
+    transform: scale(1.05);
 }
 
 /* =========================
@@ -285,10 +434,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-
     gap: 15px;
     flex-wrap: wrap;
-
     margin-top: 35px;
 }
 
@@ -297,7 +444,7 @@ section {
     align-items: center;
     justify-content: center;
 
-    padding: 15px 25px;
+    padding: 16px 28px;
 
     border-radius: 30px;
 
@@ -324,8 +471,19 @@ section {
 ========================= */
 
 .message-area {
-    max-width: 750px;
+    max-width: 850px;
     margin: auto;
+
+    background: #141419;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    border: 1px solid #25252d;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,0.25);
 }
 
 .message-area .section-title {
@@ -337,7 +495,7 @@ section {
 }
 
 .wbnz-comments {
-    background: #141419;
+    background: #0f0f13;
     border-radius: 18px;
     padding: 25px;
     min-height: 200px;
@@ -349,9 +507,16 @@ section {
 
 footer {
     text-align: center;
-    padding: 50px 20px;
+    padding: 70px 20px;
     background: #050507;
     color: #777;
+}
+
+footer .made-by {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
 }
 
 footer strong {
@@ -486,15 +651,24 @@ footer strong {
     }
 
     nav a {
-        font-size: 10px;
+        font-size: 9px;
     }
 
     .logo {
-        font-size: 13px;
+        font-size: 12px;
+        letter-spacing: 1px;
     }
 
     .hero {
         padding: 60px 25px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-quote {
+        font-size: 15px;
     }
 
     section {
@@ -514,6 +688,10 @@ footer strong {
         max-width: 300px;
     }
 
+    .message-area {
+        padding: 25px 15px;
+    }
+
     .birthday-special-content .emoji {
         font-size: 50px;
     }
@@ -526,6 +704,19 @@ footer strong {
 
 
 <body>
+
+
+<!-- =========================
+     THEME TOGGLE
+========================= -->
+
+<button
+class="theme-toggle"
+onclick="toggleTheme()"
+title="Change theme"
+>
+🌙
+</button>
 
 
 <!-- =========================
@@ -596,6 +787,12 @@ BIRTHDAY
 </li>
 
 <li>
+<a href="#music">
+MUSIC
+</a>
+</li>
+
+<li>
 <a href="#message">
 MESSAGE
 </a>
@@ -614,14 +811,34 @@ MESSAGE
 
 <div class="hero-content">
 
+<div class="welcome-small">
+WELCOME TO
+</div>
+
 <h1>
-MILAN<br>
-ÖNDER
+MILAN'S<br>
+HOMIES ♡
 </h1>
 
-<p>
-A fan-made space created with love for Milan Önder.
+<p class="hero-quote">
+
+"My homie, you don't even know me<br>
+Black on black but I keep it low-key<br>
+Move to the top never moving slowly<br>
+Hit the floor let's go Ozi"
+
 </p>
+
+<p class="quote-author">
+— Milan Önder ♡
+</p>
+
+<a
+href="#about"
+class="explore-button"
+>
+EXPLORE THE SITE ↓
+</a>
 
 </div>
 
@@ -829,26 +1046,87 @@ SECONDS
 
 
 <!-- =========================
-     MUSIC
+     MUSIC CORNER
 ========================= -->
 
-<section class="music">
+<section
+id="music"
+class="music"
+>
 
-<div class="music-card">
+<h2 class="section-title">
+🎵 Milan's Music Corner
+</h2>
+
+<p class="section-subtitle">
+Two special songs connected to Milan. ♡
+</p>
+
+<div class="music-grid">
+
+
+<div class="music-card-small">
+
+<div class="music-icon">
+🎵
+</div>
 
 <h3>
-🎵 Godspeed
+Godspeed
 </h3>
 
 <p>
-
-Frank Ocean's "Godspeed" holds a special place
-in Milan's story.
-
-A song remembered by fans and connected
-to a meaningful tattoo.
-
+Frank Ocean
 </p>
+
+<p>
+A song that holds a special place
+in Milan's story and is connected
+to one of his meaningful tattoos.
+</p>
+
+<a
+class="spotify-button"
+href="https://open.spotify.com/track/34xTFwjPQ1dC6uJmleno7x"
+target="_blank"
+rel="noopener"
+>
+▶ Listen on Spotify
+</a>
+
+</div>
+
+
+<div class="music-card-small">
+
+<div class="music-icon">
+🎵
+</div>
+
+<h3>
+Mariners Apartment Complex
+</h3>
+
+<p>
+Lana Del Rey
+</p>
+
+<p>
+Another special song connected
+to one of Milan's meaningful tattoos.
+</p>
+
+<a
+class="spotify-button"
+href="https://open.spotify.com/track/6OG05bPAwUuV3OMvy2Vy1P"
+target="_blank"
+rel="noopener"
+>
+▶ Listen on Spotify
+</a>
+
+</div>
+
 
 </div>
 
@@ -868,7 +1146,6 @@ Follow Milan
 <p class="section-subtitle">
 Follow Milan and support him on social media. ♡
 </p>
-
 
 <div class="social-links">
 
@@ -933,7 +1210,7 @@ Messages for Milan 💌
 <p class="section-subtitle">
 
 Write something you'd like to say to Milan.
-Your message will appear here. ♡
+Share your thoughts with other Homies. ♡
 
 </p>
 
@@ -955,6 +1232,10 @@ data-webynize-id="11946">
 
 <footer>
 
+<p class="made-by">
+Made by Diphy ♡
+</p>
+
 <p>
 Made with ♡ for
 <strong>
@@ -966,22 +1247,87 @@ Milan Önder
 Milan Önder Fan Site
 </p>
 
-<p>
-Made by Diphy ♡
-</p>
-   
 </footer>
 
 
 <!-- =========================
-     BIRTHDAY COUNTDOWN SCRIPT
+     JAVASCRIPT
 ========================= -->
 
 <script>
 
+/* =========================
+   DARK / LIGHT MODE
+========================= */
+
+function toggleTheme() {
+
+document.body.classList.toggle(
+"light-mode"
+);
+
+const button =
+document.querySelector(
+".theme-toggle"
+);
+
+if (
+document.body.classList.contains(
+"light-mode"
+)
+) {
+
+button.textContent = "☀️";
+
+localStorage.setItem(
+"theme",
+"light"
+);
+
+} else {
+
+button.textContent = "🌙";
+
+localStorage.setItem(
+"theme",
+"dark"
+);
+
+}
+
+}
+
+
+/* LOAD SAVED THEME */
+
+const savedTheme =
+localStorage.getItem(
+"theme"
+);
+
+if (
+savedTheme === "light"
+) {
+
+document.body.classList.add(
+"light-mode"
+);
+
+document.querySelector(
+".theme-toggle"
+).textContent = "☀️";
+
+}
+
+
+/* =========================
+   BIRTHDAY COUNTDOWN
+========================= */
+
 function updateCountdown() {
 
-const now = new Date();
+const now =
+new Date();
 
 let year =
 now.getFullYear();
@@ -997,7 +1343,9 @@ year,
 );
 
 
-if (now > birthday) {
+if (
+now > birthday
+) {
 
 birthday =
 new Date(
@@ -1075,7 +1423,6 @@ updateCountdown,
 1000
 );
 
-
 updateCountdown();
 
 
@@ -1088,10 +1435,8 @@ function checkBirthday() {
 const now =
 new Date();
 
-
 const month =
 now.getMonth();
-
 
 const day =
 now.getDate();
@@ -1143,4 +1488,4 @@ src="https://widgets.webynize.com/comments.js">
 
 </body>
 
-    </html>
+   </html>
