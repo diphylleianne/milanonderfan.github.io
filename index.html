@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Milan Önder Fan Site</title>
@@ -236,60 +239,28 @@ section {
     color: #aaa;
 }
 
-/* MESSAGE */
+/* MESSAGES */
 
-.message-box {
-    max-width: 650px;
+.message-area {
+    max-width: 750px;
     margin: auto;
+}
+
+.message-area .section-title {
+    text-align: center;
+}
+
+.message-area .section-subtitle {
+    text-align: center;
+}
+
+/* WEBYNIZE */
+
+.wbnz-comments {
     background: #141419;
-    padding: 35px;
     border-radius: 18px;
-}
-
-.message-box form {
-    display: block;
-    width: 100%;
-}
-
-input,
-textarea {
-    display: block;
-    width: 100%;
-    background: #222229;
-    border: 1px solid #33333d;
-    color: white;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 16px;
-}
-
-input::placeholder,
-textarea::placeholder {
-    color: #999;
-}
-
-textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-button {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background: white;
-    color: black;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-button:hover {
-    opacity: 0.8;
+    padding: 25px;
+    min-height: 200px;
 }
 
 /* FOOTER */
@@ -558,50 +529,21 @@ A song remembered by fans and connected to a meaningful tattoo.
 </section>
 
 
-<!-- MESSAGE -->
+<!-- MESSAGES FOR MILAN -->
 
 <section id="message">
 
+<div class="message-area">
+
 <h2 class="section-title">
-Leave a Message
+Messages for Milan 💌
 </h2>
 
 <p class="section-subtitle">
-Write something you'd like to say to Milan. ♡
+Write something you'd like to say to Milan. Your message will appear here. ♡
 </p>
 
-<div class="message-box">
-
-<form
-action="https://formspree.io/f/mdaqwgrq"
-method="POST"
->
-
-<input
-type="text"
-name="name"
-placeholder="Your name"
-required
->
-
-<input
-type="email"
-name="email"
-placeholder="Your email"
-required
->
-
-<textarea
-name="message"
-placeholder="Your message for Milan..."
-required
-></textarea>
-
-<button type="submit">
-SEND MESSAGE
-</button>
-
-</form>
+<div class="wbnz-comments" data-webynize-id="11946"></div>
 
 </div>
 
@@ -623,7 +565,7 @@ Milan Önder Fan Site
 </footer>
 
 
-<!-- COUNTDOWN -->
+<!-- BIRTHDAY COUNTDOWN -->
 
 <script>
 
@@ -710,6 +652,14 @@ updateCountdown();
 </script>
 
 
+<!-- WEBYNIZE COMMENTS -->
+
+<script
+defer
+src="https://widgets.webynize.com/comments.js">
+</script>
+
+
 </body>
 
-</html>
+    </html>
